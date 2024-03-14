@@ -24,19 +24,24 @@ countChars('Testing');
 //  Question 2 - palindrome identifier
 // grab last digit and move it to front of new string, then drop it from temp
 function palindromeIdentifier() {
-  const inputNum = document.querySelector('#palindromeform').valueAsNumber;
-  let reversedNum = 0;
-  let tempNum = inputNum;
-  while (tempNum != 0) {
-    reversedNum = reversedNum * 10 + (tempNum % 10);
-    tempNum = Math.floor(tempNum / 10);
-  }
-  if (inputNum === reversedNum) {
-    document.querySelector('#palindromeResult').textContent =
-      'This is a palindrome!';
+  inputNum = document.querySelector('#palindromeform').valueAsNumber;
+  if (inputNum) {
+    let reversedNum = 0;
+    let tempNum = inputNum;
+    while (tempNum != 0) {
+      reversedNum = reversedNum * 10 + (tempNum % 10);
+      tempNum = Math.floor(tempNum / 10);
+    }
+    if (inputNum === reversedNum) {
+      document.querySelector('#palindromeResult').textContent =
+        'This is a palindrome!';
+    } else {
+      document.querySelector('#palindromeResult').textContent =
+        'This is not a palindrome!';
+    }
   } else {
     document.querySelector('#palindromeResult').textContent =
-      'This is not a palindrome!';
+      'Error, try again.';
   }
 }
 
