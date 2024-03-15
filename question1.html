@@ -35,6 +35,52 @@
         </ul>
       </header>
     </div>
+    <div
+      class="container bg-secondary rounded-3 py-3 mt-3 text-center border border-primary border-3"
+    >
+      <p class="fs-5 fw-bold">Vowel and Consonant Counter</p>
+      <p class="fs-3">Enter a string to analyze.</p>
+      <div class="mx-auto col-auto col-md-8">
+        <form>
+          <div class="p-3 rounded-2 row justify-content-center">
+            <input type="text" class="form-control" id="stringInput" />
+          </div>
+
+          <div class="form-check form-switch d-flex justify-content-center">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="include-y"
+            />
+            <label class="form-check-label px-3" for="include-y"
+              >Include Y</label
+            >
+          </div>
+        </form>
+        <div class="row justify-content-center p-3">
+          <button
+            onclick="countChars()"
+            class="btn btn-primary col-auto"
+            type="submit"
+          >
+            Process
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container bg-secondary rounded-3 py-3 mt-3 border border-primary border-3 text-center"
+    >
+      <div class="row">
+        <div class="col tip-display">Vowels:</div>
+        <div class="col tip-display">Consonants:</div>
+      </div>
+      <div class="row">
+        <div class="col tip-display" id="vowelCount">0</div>
+        <div class="col tip-display" id="consonantCount">0</div>
+      </div>
+    </div>
     <div>
       <footer class="bg-dark-subtle p-3 mt-3">
         <div class="container border-top mt-2 pt-4">
